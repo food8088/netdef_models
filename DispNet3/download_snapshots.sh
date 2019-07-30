@@ -7,7 +7,7 @@ download () {
 	state=$3
 	subpath="$net/training/$evo/checkpoints"
 	wget  --no-check-certificate "$URL_BASE/$subpath/snapshot-$state.data-00000-of-00001" -P $subpath
-	wget  "$URL_BASE/$subpath/snapshot-$state.index" -P $subpath
+	wget  --no-check-certificate "$URL_BASE/$subpath/snapshot-$state.index" -P $subpath
 	wget  --no-check-certificate "$URL_BASE/$subpath/snapshot-$state.meta" -P $subpath
 }
 
